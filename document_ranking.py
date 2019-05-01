@@ -14,10 +14,9 @@ from functools import reduce
 # We use a corpus of four documents.  Each document has an id, and
 # these are the keys in the following dict.  The values are the
 # corresponding filenames.
-document_filenames = {0 : "documents/lotr.txt",
-                      1 : "documents/silmarillion.txt",
-                      2 : "documents/rainbows_end.txt",
-                      3 : "documents/the_hobbit.txt"}
+document_filenames = {0 : "data/I_Talan_Pomylka_2014(5).txt",
+                      1 : "data/I_Tarasov_Cheslav_V_temryavi_soncya_2013(3).txt"
+                      }
 
 # The size of the corpus
 N = len(document_filenames)
