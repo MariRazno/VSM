@@ -14,9 +14,8 @@ from functools import reduce
 # We use a corpus of four documents.  Each document has an id, and
 # these are the keys in the following dict.  The values are the
 # corresponding filenames.
-document_filenames = {0 : "data/I_Talan_Pomylka_2014(5).txt",
-                      1 : "data/I_Tarasov_Cheslav_V_temryavi_soncya_2013(3).txt"
-                      }
+document_filenames = {0: 'data/I_Protsiuk_Desiatyi_riadok_3_2014(5).txt', 1: 'data/I_Shevchuk_Krosvord_2_2014(5).txt'}
+
 
 # The size of the corpus
 N = len(document_filenames)
@@ -159,5 +158,11 @@ def similarity(query,id):
     similarity = similarity / length[id]
     return similarity
 
+import os
 if __name__ == "__main__":
+    id = 0
+    for file in os.listdir("./data"):
+        if file.endswith(".txt") and not file.endswith(".tok.txt") and id < 25:
+            document_filenames[id] = os.path.join("data", file)
+            id += 1
     main()
